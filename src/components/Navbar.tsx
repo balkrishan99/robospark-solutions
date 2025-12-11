@@ -12,12 +12,12 @@ const Navbar = () => {
           <span className="font-heading font-bold text-xl">TerraBot</span>
         </Link>
         
-        <div className="hidden md:flex items-center gap-8">
-          <a href="#solution" className="text-muted-foreground hover:text-foreground transition-colors">Solution</a>
-          <a href="#specs" className="text-muted-foreground hover:text-foreground transition-colors">Tech Specs</a>
-          <a href="#dashboard" className="text-muted-foreground hover:text-foreground transition-colors">Dashboard</a>
-          <a href="#team" className="text-muted-foreground hover:text-foreground transition-colors">Team</a>
-          <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact</a>
+        <div className="hidden lg:flex items-center gap-6">
+          <a href="#specs" className="text-muted-foreground hover:text-foreground transition-colors text-sm">Tech</a>
+          <a href="#cad-viewer" className="text-muted-foreground hover:text-foreground transition-colors text-sm">CAD</a>
+          <a href="#sensor-sim" className="text-muted-foreground hover:text-foreground transition-colors text-sm">Sensors</a>
+          <a href="#competitors" className="text-muted-foreground hover:text-foreground transition-colors text-sm">Compare</a>
+          <a href="#team" className="text-muted-foreground hover:text-foreground transition-colors text-sm">Team</a>
         </div>
         
         <div className="flex items-center gap-3">
