@@ -7,6 +7,8 @@ import TechSpecsSection from "@/components/TechSpecsSection";
 import DashboardSection from "@/components/DashboardSection";
 import RobotSimulator from "@/components/RobotSimulator";
 import ImpactSection from "@/components/ImpactSection";
+import TeamSection from "@/components/TeamSection";
+import ContactSection from "@/components/ContactSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
@@ -23,6 +25,8 @@ const Index = () => {
         <DashboardSection />
         <RobotSimulator />
         <ImpactSection />
+        <TeamSection />
+        <ContactSection />
         <CTASection />
       </main>
       <Footer />

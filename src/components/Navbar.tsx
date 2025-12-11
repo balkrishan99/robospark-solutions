@@ -13,12 +13,11 @@ const Navbar = () => {
         </Link>
         
         <div className="hidden md:flex items-center gap-8">
-          <a href="#problem" className="text-muted-foreground hover:text-foreground transition-colors">Problem</a>
           <a href="#solution" className="text-muted-foreground hover:text-foreground transition-colors">Solution</a>
           <a href="#specs" className="text-muted-foreground hover:text-foreground transition-colors">Tech Specs</a>
           <a href="#dashboard" className="text-muted-foreground hover:text-foreground transition-colors">Dashboard</a>
-          <a href="#simulator" className="text-muted-foreground hover:text-foreground transition-colors">Simulator</a>
-          <a href="#impact" className="text-muted-foreground hover:text-foreground transition-colors">Impact</a>
+          <a href="#team" className="text-muted-foreground hover:text-foreground transition-colors">Team</a>
+          <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact</a>
         </div>
         
         <div className="flex items-center gap-3">
@@ -30,7 +29,7 @@ const Navbar = () => {
             Pitch Deck
           </Link>
           <a 
-            href="#demo" 
+            href="#contact" 
             className="h-10 px-5 rounded-lg gradient-hero text-primary-foreground font-medium flex items-center justify-center hover:scale-105 transition-transform"
           >
             Get Demo
