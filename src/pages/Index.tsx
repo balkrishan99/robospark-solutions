@@ -4,8 +4,11 @@ import ProblemSection from "@/components/ProblemSection";
 import SolutionSection from "@/components/SolutionSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import TechSpecsSection from "@/components/TechSpecsSection";
+import CADViewer from "@/components/CADViewer";
+import SensorSimulation from "@/components/SensorSimulation";
 import DashboardSection from "@/components/DashboardSection";
 import RobotSimulator from "@/components/RobotSimulator";
+import CompetitorAnalysis from "@/components/CompetitorAnalysis";
 import ImpactSection from "@/components/ImpactSection";
 import TeamSection from "@/components/TeamSection";
 import ContactSection from "@/components/ContactSection";
@@ -22,8 +25,11 @@ const Index = () => {
         <SolutionSection />
         <HowItWorksSection />
         <TechSpecsSection />
+        <CADViewer />
+        <SensorSimulation />
         <DashboardSection />
         <RobotSimulator />
+        <CompetitorAnalysis />
         <ImpactSection />
         <TeamSection />
         <ContactSection />
