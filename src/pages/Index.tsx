@@ -9,6 +9,9 @@ import SensorSimulation from "@/components/SensorSimulation";
 import DashboardSection from "@/components/DashboardSection";
 import RobotSimulator from "@/components/RobotSimulator";
 import CompetitorAnalysis from "@/components/CompetitorAnalysis";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import RoadmapSection from "@/components/RoadmapSection";
+import FinancialsSection from "@/components/FinancialsSection";
 import ImpactSection from "@/components/ImpactSection";
 import TeamSection from "@/components/TeamSection";
 import ContactSection from "@/components/ContactSection";
@@ -30,6 +33,9 @@ const Index = () => {
         <DashboardSection />
         <RobotSimulator />
         <CompetitorAnalysis />
+        <TestimonialsSection />
+        <RoadmapSection />
+        <FinancialsSection />
         <ImpactSection />
         <TeamSection />
         <ContactSection />
