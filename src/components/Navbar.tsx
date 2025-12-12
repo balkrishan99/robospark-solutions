@@ -17,7 +17,6 @@ const Navbar = () => {
           <a href="#cad-viewer" className="text-muted-foreground hover:text-foreground transition-colors text-sm">CAD</a>
           <a href="#sensor-sim" className="text-muted-foreground hover:text-foreground transition-colors text-sm">Sensors</a>
           <a href="#competitors" className="text-muted-foreground hover:text-foreground transition-colors text-sm">Compare</a>
-          <a href="#team" className="text-muted-foreground hover:text-foreground transition-colors text-sm">Team</a>
         </div>
         
         <div className="flex items-center gap-3">
