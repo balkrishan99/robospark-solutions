@@ -32,6 +32,7 @@ const CADViewer = () => {
 
   useEffect(() => {
     if (!containerRef.current) return;
+    const container = containerRef.current;
 
     // Scene setup
     const scene = new THREE.Scene();
@@ -39,16 +40,16 @@ const CADViewer = () => {
     sceneRef.current = scene;
 
     // Camera
-    const camera = new THREE.PerspectiveCamera(50, containerRef.current.clientWidth / containerRef.current.clientHeight, 0.1, 1000);
+    const camera = new THREE.PerspectiveCamera(50, container.clientWidth / container.clientHeight, 0.1, 1000);
     camera.position.set(8, 6, 8);
     camera.lookAt(0, 0, 0);
     cameraRef.current = camera;
 
     // Renderer
     const renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setSize(containerRef.current.clientWidth, containerRef.current.clientHeight);
+    renderer.setSize(container.clientWidth, container.clientHeight);
     renderer.shadowMap.enabled = true;
-    containerRef.current.appendChild(renderer.domElement);
+    container.appendChild(renderer.domElement);
     rendererRef.current = renderer;
 
     // Lights
@@ -248,8 +249,8 @@ const CADViewer = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
       renderer.dispose();
-      if (containerRef.current && renderer.domElement) {
-        containerRef.current.removeChild(renderer.domElement);
+      if (renderer.domElement) {
+        container.removeChild(renderer.domElement);
       }
     };
   }, []);

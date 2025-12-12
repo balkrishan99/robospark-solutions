@@ -60,6 +60,12 @@ Never transmit secrets in git payloads—use workspace-level vaults or CI secret
 3. Ensure SPA rewrites funnel all non-asset routes to `index.html`
 4. Bind mission domain via provider DNS and validate SSL handshake
 
+### GitHub Pages automation
+
+- Workflow `.github/workflows/deploy.yml` builds `main` and publishes an artifact for GitHub Pages.
+- The build step runs `npm run build -- --base=/<repo-name>/` so asset references resolve under the repository subpath.
+- After the first successful run, enable **Settings → Pages → Source → GitHub Actions** and the site will be served at `https://<account>.github.io/robospark-solutions/`.
+
 ## 6. Maintenance Channels
 
 - Open tickets through the RoboSpark Solutions tracker

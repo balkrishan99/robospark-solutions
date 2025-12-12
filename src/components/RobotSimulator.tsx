@@ -21,6 +21,7 @@ const RobotSimulator = () => {
 
   useEffect(() => {
     if (!containerRef.current) return;
+    const container = containerRef.current;
 
     // Scene setup
     const scene = new THREE.Scene();
@@ -29,15 +30,15 @@ const RobotSimulator = () => {
     sceneRef.current = scene;
 
     // Camera
-    const camera = new THREE.PerspectiveCamera(60, containerRef.current.clientWidth / containerRef.current.clientHeight, 0.1, 100);
+    const camera = new THREE.PerspectiveCamera(60, container.clientWidth / container.clientHeight, 0.1, 100);
     camera.position.set(10, 15, 10);
     camera.lookAt(0, 0, 0);
 
     // Renderer
     const renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setSize(containerRef.current.clientWidth, containerRef.current.clientHeight);
+    renderer.setSize(container.clientWidth, container.clientHeight);
     renderer.shadowMap.enabled = true;
-    containerRef.current.appendChild(renderer.domElement);
+    container.appendChild(renderer.domElement);
     rendererRef.current = renderer;
 
     // Lighting
@@ -122,7 +123,7 @@ const RobotSimulator = () => {
     // Animation variables
     let time = 0;
     let robotAngle = 0;
-    let robotRadius = 5;
+    const robotRadius = 5;
 
     const animate = () => {
       animationRef.current = requestAnimationFrame(animate);
@@ -177,8 +178,8 @@ const RobotSimulator = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
       if (animationRef.current) cancelAnimationFrame(animationRef.current);
-      if (rendererRef.current && containerRef.current) {
-        containerRef.current.removeChild(rendererRef.current.domElement);
+      if (rendererRef.current) {
+        container.removeChild(rendererRef.current.domElement);
       }
       rendererRef.current?.dispose();
     };
