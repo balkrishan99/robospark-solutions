@@ -1,16 +1,21 @@
-# TerraBot – Autonomous Agricultural Robotics Platform
+# TerraBot Deployment Briefing
 
-![TerraBot field robot](./src/assets/hero-robot.jpg)
+![TerraBot field unit](./src/assets/hero-robot.jpg)
 
-TerraBot is RoboSpark Solutions’ interactive product site for AI-powered agricultural robotics. The experience covers product positioning, feature deep dives, dynamic simulations, and performance dashboards aimed at growers and agritech partners.
+> _Designation: TerraBot v4_ – an autonomous agritech platform engineered by RoboSpark Solutions for precision crop stewardship.
 
-## Project info
+| Metric | Target | Notes |
+| ------ | ------ | ----- |
+| Field Coverage | 250 acres / 24h | Autonomous path planning with ROS2 Humble stack |
+| Yield Uplift | +60% | Continuous plant health telemetry + adaptive dosing |
+| Cost Reduction | −40% OPEX | Labour displacement + predictive maintenance |
+| Mission Uptime | 24/7 | Dual-redundant power rails, self-docking charge nodes |
 
-- **Maintainer**: RoboSpark Solutions
-- **Stack**: Vite · React · TypeScript · Tailwind CSS · shadcn/ui · Supabase client
-- **Default port**: `8080`
+## 1. System Overview
 
-## Work locally
+The repository powers terrabot.ag – an interactive console showcasing live mission feeds, CAD exploders, sensor simulations, and ROI dashboards. Front-end surfaces are rendered with React + shadcn/ui, while Supabase handles telemetry persistence and authenticated data pulls.
+
+## 2. Local Operations Protocol
 
 ```sh
 git clone <repository-url>
@@ -19,42 +24,46 @@ npm install
 npm run dev
 ```
 
-Open `http://localhost:8080/` to explore the site. The dev server hot-reloads as you edit files. To lint the project run `npm run lint`.
+Command center boots on `http://localhost:8080/`. Hot module reload keeps telemetry panels in sync while iterating. Execute `npm run lint` before committing to ensure mission scripting stays within spec.
 
-### Build & preview
+### Production Build Simulation
 
 ```sh
 npm run build
 npm run preview
 ```
 
-`npm run build` outputs the production bundle to `dist/`. Use `npm run preview` to serve the compiled assets locally before deploying.
+Artifacts land in `dist/`. Preview spin-up allows validation of static exports and routing fallbacks prior to field deployment.
 
-## Editing options
+## 3. Module Topology
 
-- **Local IDE**: Use your preferred editor (VS Code, WebStorm, etc.). Update files in `src/` for UI/logic, `supabase/` for data migrations, and `public/` for static assets.
-- **GitHub UI**: Quick patches can be made in-browser—commit directly to feature branches and open pull requests.
-- **Codespaces**: Launch a cloud dev environment from the repository’s **Code → Codespaces** menu when you need an on-demand workspace.
+- `src/pages` – mission routing shells and layout orchestrators
+- `src/components` – hero timeline, sensor vis layers, robotics simulators
+- `src/hooks` – shared control logic (viewport breakpoints, toast bus, Supabase ops)
+- `src/assets` – field photography, system renders, deck imagery
+- `supabase/` – SQL migrations + configuration for telemetry services
 
-## Key directories
+## 4. Environment Payload
 
-- `src/pages` – route-level layouts and orchestration components
-- `src/components` – reusable UI blocks, data visualisations, and simulators
-- `src/hooks` – shared hooks (responsive helpers, toast utilities, Supabase helpers)
-- `src/assets` – images and media used across the experience
-- `supabase/` – configuration and SQL migrations for backend services
+Duplicate `.env.example` to `.env` and populate:
 
-## Environment configuration
+- `VITE_SUPABASE_URL`
+- `VITE_SUPABASE_ANON_KEY`
+- Any partner integration tokens (analytics, auth, operations)
 
-Copy `.env.example` to `.env` and populate Supabase keys plus any third-party tokens prior to running builds or the dev server. Never commit secrets to version control.
+Never transmit secrets in git payloads—use workspace-level vaults or CI secrets stores.
 
-## Deployment guidance
+## 5. Deployment Runbook
 
-1. Build the project: `npm run build`
-2. Deploy the `dist/` directory to your hosting platform (Vercel, Netlify, GitHub Pages, S3 + CloudFront, etc.)
-3. Configure rewrites so all routes fall back to `index.html` for SPA navigation
-4. Attach your domain via your provider’s DNS tools if you need a custom URL
+1. `npm run build`
+2. Ship `dist/` to target host (Vercel, Netlify, GitHub Pages, S3 + CDN, etc.)
+3. Ensure SPA rewrites funnel all non-asset routes to `index.html`
+4. Bind mission domain via provider DNS and validate SSL handshake
 
-## Support
+## 6. Maintenance Channels
 
-File issues or feature requests via the RoboSpark Solutions tracker, or reach the maintainers through the usual internal channels. Update this section with your preferred contact path if needed.
+- Open tickets through the RoboSpark Solutions tracker
+- Escalate production incidents via on-call rotation channels
+- For roadmap discussions, sync with the Robotics PM guild during weekly cadence
+
+_End of briefing. Initiate deployment sequence when pre-flight checks pass._
