@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c341f" />
+      <stop offset="100%" stop-color="#124f32" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <g fill="#b6f4c4">
+    <circle cx="950" cy="210" r="90" opacity="0.2" />
+    <circle cx="240" cy="440" r="140" opacity="0.18" />
+  </g>
+  <g fill="#ffffff" font-family="'Segoe UI', Tahoma, sans-serif">
+    <text x="80" y="230" font-size="72" font-weight="600">TerraBot</text>
+    <text x="80" y="310" font-size="36">Autonomous Agricultural Robotics</text>
+    <text x="80" y="410" font-size="28" fill="#d9fdd7">Precision crop monitoring, adaptive routing, and predictive insights.</text>
+  </g>
+  <g stroke="#9ce0ad" stroke-width="4" fill="none" opacity="0.5">
+    <path d="M680 170 h200 a30 30 0 0 1 30 30 v110 a30 30 0 0 1 -30 30 h-200 a30 30 0 0 1 -30 -30 v-110 a30 30 0 0 1 30 -30 z" />
+    <path d="M720 220 h120" />
+    <path d="M720 260 h160" />
+    <path d="M720 300 h100" />
+  </g>
+</svg>
