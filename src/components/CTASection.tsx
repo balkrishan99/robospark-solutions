@@ -19,20 +19,26 @@ const CTASection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="xl" 
+            <Button
+              asChild
+              size="xl"
               className="bg-background text-foreground hover:bg-background/90 shadow-lg hover:shadow-xl"
             >
-              <Calendar className="w-5 h-5" />
-              Schedule Demo
+              <a href="#contact" aria-label="Schedule a TerraBot demo">
+                <Calendar className="w-5 h-5" />
+                Schedule Demo
+              </a>
             </Button>
-            <Button 
-              size="xl" 
+            <Button
+              asChild
+              size="xl"
               variant="outline"
               className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary bg-transparent"
             >
-              <Mail className="w-5 h-5" />
-              Contact Sales
+              <a href="mailto:hello@terrabot.farm" aria-label="Contact TerraBot sales">
+                <Mail className="w-5 h-5" />
+                Contact Sales
+              </a>
             </Button>
           </div>
           

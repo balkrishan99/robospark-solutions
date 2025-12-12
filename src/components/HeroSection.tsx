@@ -39,9 +39,11 @@ const HeroSection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-up" style={{ animationDelay: '0.3s' }}>
-              <Button variant="hero" size="xl">
-                Schedule Demo
-                <ArrowRight className="w-5 h-5" />
+              <Button asChild variant="hero" size="xl">
+                <a href="#contact" aria-label="Schedule a TerraBot demo">
+                  Schedule Demo
+                  <ArrowRight className="w-5 h-5" />
+                </a>
               </Button>
               <Button variant="heroOutline" size="xl">
                 <Play className="w-5 h-5" />
